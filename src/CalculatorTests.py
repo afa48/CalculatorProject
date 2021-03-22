@@ -33,5 +33,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.squared(3), 9)
         self.assertEqual(self.calculator.result, 9)
 
+    def test_squareRooted_method_calculator(self):
+        self.assertEqual(self.calculator.squareRooted(25), 5)
+        self.assertEqual(self.calculator.result, 5)
+
 if __name__ == '__main__':
     unittest.main()
