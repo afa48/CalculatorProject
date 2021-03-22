@@ -13,6 +13,9 @@ def division(a, b):
 def square(a):
     return a**2
 
+def sqaureRoot(a):
+    return a**(1/2)
+
 class Calculator:
     result = 0
 
@@ -37,5 +40,9 @@ class Calculator:
 
     def squared(self, a):
         self.result = square(a)
+        return self.result
+
+    def squareRooted(self, a):
+        self.result = sqaureRoot(a)
         return self.result
 
