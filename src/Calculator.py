@@ -1,8 +1,14 @@
 def addition(a, b):
-    return a + b
+    a= int(a)
+    b= int(b)
+    c= b + a
+    return c
 
 def subtraction(a, b):
-    return a - b
+    a= int(a)
+    b= int(b)
+    c= b - a
+    return c
 
 def multiplication(a, b):
     return a * b
@@ -13,7 +19,7 @@ def division(a, b):
 def square(a):
     return a**2
 
-def sqaureRoot(a):
+def squareroot(a):
     return a**(1/2)
 
 class Calculator:
@@ -42,7 +48,7 @@ class Calculator:
         self.result = square(a)
         return self.result
 
-    def squareRooted(self, a):
-        self.result = sqaureRoot(a)
+    def squarerooted(self, a):
+        self.result = squareroot(a)
         return self.result
 
