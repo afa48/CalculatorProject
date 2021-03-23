@@ -42,14 +42,14 @@ class MyTestCase(unittest.TestCase):
     def test_squared_method_calculator(self):
         test_data = CsvReader('/src/Unit Test Square.csv').data
         for row in test_data:
-        self.assertEqual(self.calculator.squared(row['Value 1']), int(row['Result']))
-        self.assertEqual(self.calculator.result, int(row['Result']))
+            self.assertEqual(self.calculator.squared(row['Value 1']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_squareRooted_method_calculator(self):
         test_data = CsvReader('/src/Unit Test Square Root.csv').data
         for row in test_data:
-        self.assertEqual(self.calculator.squarerooted(25), 5)
-        self.assertEqual(self.calculator.result, 5)
+            self.assertEqual(self.calculator.squarerooted(row['Value 1']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
 
 if __name__ == '__main__':
     unittest.main()

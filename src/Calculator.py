@@ -23,10 +23,14 @@ def division(a, b):
     return c
 
 def square(a):
-    return a**2
+    a= int(a)
+    c= a**2
+    return c
 
 def squareroot(a):
-    return a**(1/2)
+    a= int(a)
+    c= a**(1/2)
+    return c
 
 class Calculator:
     result = 0
