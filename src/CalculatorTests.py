@@ -28,12 +28,16 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_multiply_method_calculator(self):
-        self.assertEqual(self.calculator.multiply(2, 2), 4)
-        self.assertEqual(self.calculator.result, 4)
+        test_data = CsvReader('/src/Unit Test Multiplication.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_divide_method_calculator(self):
-        self.assertEqual(self.calculator.divide(12, 2), 6)
-        self.assertEqual(self.calculator.result, 6)
+        test_data = CsvReader('/src/Unit Test Division.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_squared_method_calculator(self):
         self.assertEqual(self.calculator.squared(3), 9)
